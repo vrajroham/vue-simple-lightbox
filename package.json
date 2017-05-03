@@ -1,0 +1,49 @@
+{
+  "name": "vue-simple-lightbox",
+  "version": "0.0.1",
+  "description": "A Vue.js component for touch-friendly image lightbox",
+  "main": "./dist/vue-simple-lightbox.js",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --hot --config ./build/dev.js --port 8080",
+    "prepublish": "npm run build",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config ./build/prod.js && npm run build:demo",
+    "build:demo": "cross-env NODE_ENV=production webpack --progress --hide-modules --config ./build/dev.js"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "simplelightbox": "^1.10.7",
+    "vue": "^2.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "babel-plugin-transform-runtime": "^6.0.0",
+    "babel-preset-es2015": "^6.0.0",
+    "babel-preset-stage-2": "^6.0.0",
+    "cross-env": "^1.0.6",
+    "css-loader": "^0.23.0",
+    "file-loader": "^0.8.4",
+    "json-loader": "^0.5.4",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "vue-hot-reload-api": "^2.1.0",
+    "vue-html-loader": "^1.2.3",
+    "vue-loader": "^8.5.4",
+    "vue-style-loader": "^1.0.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vrajroham/vue-simple-lightbox.git"
+  },
+  "author": "vaibhavraj Roham <vaibhavraj.roham@gmail.com> (http://vrajroham.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vrajroham/vue-simple-lightbox/issues"
+  },
+  "homepage": "https://github.com/vrajroham/vue-simple-lightbox#readme"
+}
