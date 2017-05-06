@@ -1,24 +1,44 @@
 <template>
-<div id="app">
-    <h1 class="title">Vue Lightbox</h1>
-    <h4 class="desc">A wrapper around Simple Lightbox for Vue 2</h4>
-    <Vuelightbox id="mylightbox"></Vuelightbox>
-</div>
+  <div id="app">
+      <Vuelightbox id="mylightbox" :images="items"></Vuelightbox>
+  </div>
 </template>
 
 <script>
-import Vuelightbox from '../src/index'
-export default {
-  name: 'MainApp',
-  components: {
-    Vuelightbox
-  },
-  mounted() {
-    console.log("App Mounted");
+  import Vuelightbox from '../src/index'
+  export default {
+    name: 'MainApp',
+    components: {
+      Vuelightbox
+    },
+    data(){
+      return{
+        items : [
+          {
+              src : 'http://andreknieriem.de/sl/demo/images/thumbs/thumb1.jpg',
+              title : 'Image 2'
+          },
+          {
+              src : 'http://andreknieriem.de/sl/demo/images/thumbs/thumb2.jpg',
+              title : 'Image 3'
+          },
+          {
+              src : 'http://andreknieriem.de/sl/demo/images/thumbs/thumb3.jpg',
+              title : ''
+          },
+          {
+              src : 'http://andreknieriem.de/sl/demo/images/thumbs/thumb4.jpg',
+              title : ''
+          },
+        ]
+      }
+    },
+    mounted() {
+
+    }
   }
-}
 </script>
 
-<style scoped>
-@import 'https://fonts.googleapis.com/css?family=Roboto';
+<style>
+
 </style>
