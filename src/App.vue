@@ -15,19 +15,19 @@
       return{
         items : [
           {
-              src : 'http://andreknieriem.de/sl/demo/images/thumbs/thumb1.jpg',
+              src : 'https://cdn.rawgit.com/vrajroham/vrajroham.github.io/85d64ac5/imgs/img1.jpg',
               title : 'Image 2'
           },
           {
-              src : 'http://andreknieriem.de/sl/demo/images/thumbs/thumb2.jpg',
+              src : 'https://cdn.rawgit.com/vrajroham/vrajroham.github.io/85d64ac5/imgs/img2.jpg',
               title : 'Image 3'
           },
           {
-              src : 'http://andreknieriem.de/sl/demo/images/thumbs/thumb3.jpg',
+              src : 'https://cdn.rawgit.com/vrajroham/vrajroham.github.io/85d64ac5/imgs/img3.jpg',
               title : ''
           },
           {
-              src : 'http://andreknieriem.de/sl/demo/images/thumbs/thumb4.jpg',
+              src : 'https://cdn.rawgit.com/vrajroham/vrajroham.github.io/85d64ac5/imgs/img4.jpg',
               title : ''
           },
         ]
