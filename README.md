@@ -20,7 +20,12 @@ npm install vue-simple-lightbox
   <div id="app">
     <p>Welcome to your Vue.js lightbox!</p>
 
-    <lightbox id="mylightbox" :images="images"></lightbox>
+    <lightbox
+      id="mylightbox" 
+      :images="images"
+      :image_class=" 'img-responsive img-rounded' "
+      :album_class=" 'my-album-class' ">
+    </lightbox>
 
   </div>
 </template>
@@ -65,6 +70,8 @@ Many of these props are inherited from [simplelightbox configuration so see thei
 |----------|------|--------------|
 | id | String | A string by which to identify the component, can be anything. **Required**|
 | images | Array | Array containing (src,title) **Required** |
+| image_class | String | Class for each image |
+| album_class | String | Class for album. i.e. Group of images (current lightbox)|
 
 ----
 

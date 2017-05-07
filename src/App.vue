@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-      <Vuelightbox id="mylightbox" :images="items"></Vuelightbox>
+      <Vuelightbox id="mylightbox"
+        :images="images" 
+        :image_class=" 'img-responsive img-rounded' "
+        :album_class=" 'my-album-class' ">
+      </Vuelightbox>
   </div>
 </template>
 
@@ -13,7 +17,7 @@
     },
     data(){
       return{
-        items : [
+        images : [
           {
               src : 'https://cdn.rawgit.com/vrajroham/vrajroham.github.io/85d64ac5/imgs/img1.jpg',
               title : 'Image 2'
