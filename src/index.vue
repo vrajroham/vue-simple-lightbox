@@ -1,7 +1,9 @@
 <template>
   <div>
-    <div class="my-gallery" v-for="image,key in images">
-      <a :href="image.src"><img :src="image.src" alt="" :title="image.title" /></a>
+    <div class="my-gallery" :class="album_class">
+      <a :href="image.src" v-for="image,key in images">
+        <img :src="image.src" alt="" :title="image.title" :class="image_class" />
+      </a>
     </div>
   </div>
 </template>
@@ -14,14 +16,17 @@
         required : true
       },
       images : {
-        type : Array
+        type : Array,
+        required : true
       },
-      img_class : {
+      image_class : {
+        type : String
+      },
+      album_class : {
         type : String
       }
     },
-    mounted(){
-      console.log(this.items);
+    mounted(){      
       try {
           window.$ = window.jQuery = require('jquery');
           var simplelightbox = require('simplelightbox');
