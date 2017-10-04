@@ -24,13 +24,23 @@
       },
       album_class : {
         type : String
+      },
+      options : {
+        type : Object,
+        required : false
       }
     },
-    mounted(){      
+    mounted(){
       try {
           window.$ = window.jQuery = require('jquery');
           var simplelightbox = require('simplelightbox');
-          var gal = $('.my-gallery a').simpleLightbox()
+          if(this.options != undefined){
+            var gal = $('.my-gallery a').simpleLightbox(this.options)
+          }
+          else{
+           var gal = $('.my-gallery a').simpleLightbox()
+          }
+
       } catch (e) {}
     }
   }
